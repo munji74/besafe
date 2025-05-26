@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 
 const pledges = [
   { age: "2–6yrs", link: "#", delay: 0 },
@@ -45,7 +45,7 @@ const Resources = () => {
 
       {/* Section 1: Downloadables */}
       <section className="text-center">
-        <motion.h1
+        <Motion.h1
           className="text-4xl md:text-5xl font-bold text-blue-400 mb-4"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -53,14 +53,14 @@ const Resources = () => {
           viewport={{ once: true }}
         >
           Downloadable Resources
-        </motion.h1>
+        </Motion.h1>
         <p className="text-gray-300 text-lg mb-10">
           Access our collection of helpful PDFs for young people.
         </p>
 
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-5xl mx-auto">
           {pledges.map((pledge, index) => (
-            <motion.div
+            <Motion.div
               key={index}
               className="bg-white rounded-xl p-6 shadow text-center text-slate-800"
               initial={{ opacity: 0, y: 20 }}
@@ -77,14 +77,14 @@ const Resources = () => {
               >
                 Download Pledge
               </a>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </section>
 
       {/* Section 2: SMART Rules */}
       <section>
-        <motion.div
+        <Motion.div
           className="text-center mb-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -93,11 +93,11 @@ const Resources = () => {
         >
           <h2 className="text-4xl font-bold text-green-300">SMART Rules to Help You!</h2>
           <p className="text-gray-300 mt-3">A quick guide to staying safe and responsible online.</p>
-        </motion.div>
+        </Motion.div>
 
         <div className="max-w-4xl mx-auto space-y-10">
           {smartRules.map((rule, idx) => (
-            <motion.div
+            <Motion.div
               key={rule.letter}
               className="flex items-start gap-4"
               initial={{ opacity: 0, x: -20 }}
@@ -110,7 +110,7 @@ const Resources = () => {
                 <h3 className={`font-bold ${rule.color} text-xl`}>{rule.label}:</h3>
                 <p className="text-gray-300 mt-1">{rule.text}</p>
               </div>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </section>

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { FaExclamationTriangle, FaFileAlt, FaBullhorn, FaDesktop } from "react-icons/fa";
 
 const goals = [
@@ -32,7 +32,7 @@ const Goals = () => {
   return (
     <div className="bg-slate-800 text-white py-20 px-6 space-y-24">
       {/* Title */}
-      <motion.h1
+      <Motion.h1
         className="text-4xl font-bold text-blue-400 text-center"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -40,12 +40,12 @@ const Goals = () => {
         viewport={{ once: true }}
       >
         Toolkit Goals
-      </motion.h1>
+      </Motion.h1>
 
       {/* Goals Grid */}
       <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
         {goals.map((goal, index) => (
-          <motion.div
+          <Motion.div
             key={index}
             className="flex flex-col items-center text-center p-4 rounded-xl hover:bg-slate-700 transition"
             initial={{ opacity: 0, y: 30 }}
@@ -57,12 +57,12 @@ const Goals = () => {
               {goal.icon}
             </div>
             <h3 className="text-base text-gray-300">{goal.title}</h3>
-          </motion.div>
+          </Motion.div>
         ))}
       </div>
 
       {/* Who Should Use This Kit */}
-      <motion.div
+      <Motion.div
         className="max-w-4xl mx-auto text-center space-y-6"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -73,10 +73,10 @@ const Goals = () => {
         <p className="text-gray-300 text-lg">
           This kit is crafted for young people aged 5 to 20 years. Whether you're using the internet at school, home, or on a friend’s phone, this kit provides practical tools to help you stay safe.
         </p>
-      </motion.div>
+      </Motion.div>
 
       {/* What’s Inside the Kit */}
-      <motion.div
+      <Motion.div
         className="max-w-4xl mx-auto"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -94,7 +94,7 @@ const Goals = () => {
             <strong>Online Safety Pledges:</strong> Printable pledges for different age groups with simple rules for safer internet use.
           </li>
         </ul>
-      </motion.div>
+      </Motion.div>
     </div>
   );
 };

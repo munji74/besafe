@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 
 const Contact = () => {
   return (
     <div className="bg-slate-800 text-white px-6 py-16 min-h-[80vh]">
-      <motion.h1
+      <Motion.h1
         className="text-4xl md:text-5xl font-bold text-blue-400 text-center mb-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -11,9 +11,9 @@ const Contact = () => {
         viewport={{ once: true }}
       >
         Get in Touch
-      </motion.h1>
+      </Motion.h1>
 
-      <motion.p
+      <Motion.p
         className="text-center text-gray-300 max-w-2xl mx-auto mb-12 text-lg"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -21,9 +21,9 @@ const Contact = () => {
         viewport={{ once: true }}
       >
         We'd love to hear from you. Whether you have a question, feedback, or need help — just fill out the form below and we’ll respond soon.
-      </motion.p>
+      </Motion.p>
 
-      <motion.form
+      <Motion.form
         className="max-w-xl mx-auto space-y-6"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -73,7 +73,7 @@ const Contact = () => {
         >
           Send Message
         </button>
-      </motion.form>
+      </Motion.form>
     </div>
   );
 };
