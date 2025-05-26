@@ -8,6 +8,7 @@ import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
 import SafetyTips from "./components/SafetyTips";
 import ResourcesCTA from "./components/ResourcesCTA";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 }
