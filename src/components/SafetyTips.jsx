@@ -1,46 +1,72 @@
 import React from "react";
 import SafetyCard from "./SafetyCard";
+import {
+  FaCommentAlt,
+  FaBalanceScale,
+  FaExclamationTriangle,
+  FaTrash,
+  FaBriefcase,
+  FaUserSecret,
+  FaGamepad,
+  FaRobot,
+} from "react-icons/fa";
 
 const tips = [
   {
-    icon: "😤",
+    IconComponent: FaCommentAlt,
+    iconColor: "text-pink-600",
     title: "CyberBullying",
-    description: "Bullying can now occur through a phone, a computer, or webcam, as well as in person."
+    description: "Bullying can now occur through a phone, a computer, or webcam, as well as in person.",
+    link: "/cyberbullying",
   },
   {
-    icon: "📲",
+    IconComponent: FaBalanceScale,
+    iconColor: "text-green-600",
     title: "Digital Ethics",
-    description: "Digital ethics is about following online rules — even if no one is there to catch you."
+    description: "Digital ethics is about following online rules — even if no one is there to catch you.",
+    link: "/digital-ethics",
   },
   {
-    icon: "💬",
+    IconComponent: FaExclamationTriangle,
+    iconColor: "text-yellow-500",
     title: "Inappropriate Content",
-    description: "You can find almost anything online — including content with violent, hateful, or sexual themes."
+    description: "You can find almost anything online — including content with violent, hateful, or sexual themes.",
+    link: "/inappropriate-content",
   },
   {
-    icon: "💼",
+    IconComponent: FaBriefcase,
+    iconColor: "text-purple-600",
     title: "Online Privacy",
-    description: "Once you share personal info online, it’s easy to lose control of it."
+    description: "Once you share personal info online, it’s easy to lose control of it.",
+    link: "/online-privacy",
   },
   {
-    icon: "🗑️",
+    IconComponent: FaTrash,
+    iconColor: "text-green-500",
     title: "Unwanted Requests",
-    description: "Adults may ask young people for inappropriate chats, images, or meetings offline."
+    description: "Adults may ask young people for inappropriate chats, images, or meetings offline.",
+    link: "/unwanted-requests",
   },
   {
-    icon: "🚫",
+    IconComponent: FaUserSecret,
+    iconColor: "text-red-500",
     title: "Online Predators",
-    description: "Children may encounter harmful people online while trying to make friends."
+    description: "Children may encounter harmful people online while trying to make friends.",
+    link: "/online-predators",
   },
   {
-    icon: "🎮",
+    IconComponent: FaGamepad,
+    iconColor: "text-indigo-500",
     title: "Online Gaming",
-    description: "Gaming can be fun, but may expose users to inappropriate content or overspending."
+    description: "Gaming can be fun, but may expose users to inappropriate content or overspending.",
+    link: "/online-gaming",
   },
   {
-    icon: "🤖",
+    IconComponent: FaRobot,
+    iconColor: "text-orange-500",
     title: "AI Dangers",
-    description: "AI tools can mislead, invade privacy, or manipulate users if misused."
+    description: "AI tools can mislead, invade privacy, or manipulate users if misused.",
+    link: "/ai-dangers",
   },
 ];
 
@@ -57,9 +83,10 @@ const SafetyTips = () => {
         {tips.map((tip, idx) => (
           <SafetyCard
             key={idx}
-            icon={tip.icon}
+            IconComponent={tip.IconComponent}
             title={tip.title}
             description={tip.description}
+            link={tip.link}
           />
         ))}
       </div>
