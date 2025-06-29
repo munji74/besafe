@@ -3,14 +3,16 @@ import { motion as Motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <section className="relative bg-gradient-to-b from-slate-800 to-slate-900 text-white min-h-[90vh] flex flex-col items-center justify-center px-6 text-center overflow-hidden">
+    <section className="relative bg-gradient-to-b from-sky-200 to-indigo-200 text-slate-900 min-h-[90vh] flex flex-col items-center justify-center px-6 text-center overflow-hidden">
+      
       {/* Decorative Background Bubbles */}
-      <div className="absolute top-10 left-10 w-32 h-32 bg-blue-500 opacity-10 rounded-full blur-2xl animate-pulse"></div>
-      <div className="absolute bottom-10 right-10 w-48 h-48 bg-purple-500 opacity-10 rounded-full blur-2xl animate-ping"></div>
+      <div className="absolute top-8 left-8 w-32 h-32 bg-pink-400 opacity-20 rounded-full blur-2xl animate-pulse"></div>
+      <div className="absolute bottom-10 right-12 w-44 h-44 bg-blue-400 opacity-20 rounded-full blur-2xl animate-ping"></div>
+      <div className="absolute bottom-20 left-1/3 w-28 h-28 bg-teal-400 opacity-10 rounded-full blur-2xl animate-pulse"></div>
 
-      {/* Main Content */}
+      {/* Main Heading */}
       <Motion.h1
-        className="text-4xl md:text-5xl font-extrabold mb-6 text-blue-400 leading-tight"
+        className="text-4xl md:text-5xl font-extrabold mb-6 text-blue-700 leading-tight drop-shadow"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -19,8 +21,9 @@ const Home = () => {
         to Learn & Grow
       </Motion.h1>
 
+      {/* Subheading */}
       <Motion.p
-        className="max-w-2xl text-lg text-gray-300"
+        className="max-w-2xl text-lg text-gray-700"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}

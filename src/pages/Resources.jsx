@@ -11,39 +11,47 @@ const smartRules = [
     letter: "S",
     label: "SAFE",
     color: "text-purple-500",
-    text: "Keep safe by not giving out personal information online. This includes your email, phone number, and password."
+    text: "Keep safe by not giving out personal information online. This includes your email, phone number, and password.",
   },
   {
     letter: "M",
     label: "MEETING",
     color: "text-blue-400",
-    text: "Meeting someone in person from online can be dangerous. Only do so with a parent’s permission and presence."
+    text: "Meeting someone in person from online can be dangerous. Only do so with a parent’s permission and presence.",
   },
   {
     letter: "A",
     label: "ACCEPTING",
     color: "text-orange-500",
-    text: "Accepting files or messages from strangers can lead to problems. They may contain viruses or inappropriate content."
+    text: "Accepting files or messages from strangers can lead to problems. They may contain viruses or inappropriate content.",
   },
   {
     letter: "R",
     label: "RELIABLE",
     color: "text-yellow-400",
-    text: "People online might lie about who they are. Always check facts with trusted sources or adults."
+    text: "People online might lie about who they are. Always check facts with trusted sources or adults.",
   },
   {
     letter: "T",
     label: "TELL",
     color: "text-teal-400",
-    text: "If anything online makes you uncomfortable, tell a parent, guardian, or trusted adult immediately."
-  }
+    text: "If anything online makes you uncomfortable, tell a parent, guardian, or trusted adult immediately.",
+  },
+];
+
+const thinkTips = [
+  { letter: "T", color: "text-purple-400", text: "Is it True?" },
+  { letter: "H", color: "text-blue-400", text: "Is it Helpful?" },
+  { letter: "I", color: "text-orange-400", text: "Is it Inspiring?" },
+  { letter: "N", color: "text-fuchsia-500", text: "Is it Necessary?" },
+  { letter: "K", color: "text-emerald-400", text: "Is it Kind?" },
 ];
 
 const Resources = () => {
   return (
     <div className="bg-slate-800 text-white px-6 py-16 space-y-24">
 
-      {/* Section 1: Downloadables */}
+      {/* Section 1: Downloadable Pledges */}
       <section className="text-center">
         <Motion.h1
           className="text-4xl md:text-5xl font-bold text-blue-400 mb-4"
@@ -113,6 +121,37 @@ const Resources = () => {
           ))}
         </div>
       </section>
+
+      {/* Section 3: THINK Tips */}
+      <section>
+        <Motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl font-bold text-purple-300">ALWAYS REMEMBER TO THINK</h2>
+          <p className="text-gray-400 mt-3">Before you post, ask yourself these 5 things.</p>
+        </Motion.div>
+
+        <div className="max-w-3xl mx-auto space-y-8">
+          {thinkTips.map((tip, idx) => (
+            <Motion.div
+              key={tip.letter}
+              className="flex items-start gap-4"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: idx * 0.1, duration: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <div className={`text-4xl font-extrabold ${tip.color} w-10`}>{tip.letter}</div>
+              <p className="text-gray-300 text-lg mt-1">{tip.text}</p>
+            </Motion.div>
+          ))}
+        </div>
+      </section>
+
     </div>
   );
 };
