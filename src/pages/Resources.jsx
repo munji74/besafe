@@ -47,6 +47,41 @@ const thinkTips = [
   { letter: "K", color: "text-emerald-400", text: "Is it Kind?" },
 ];
 
+const otherResources = [
+  {
+    label: "ISOC Uganda Chapter",
+    link: "https://isoc.ug/",
+  },
+  {
+    label: "Budd:e - Internet Safety Activity",
+    link: "https://budde.staysmartonline.gov.au/primary/demo.html",
+  },
+  {
+    label: "Connect with Respect Quiz – Share Take Care",
+    link: "http://www.sharetakecare.co.uk/",
+  },
+  {
+    label: "Connect with Respect Quiz – UK Safer Internet",
+    link: "http://www.saferinternet.org.uk/safer-internet-day/2013/quiz",
+  },
+  {
+    label: "Accidental Outlaw Quiz",
+    link: "http://accidentaloutlaw.knowthenet.org.uk/",
+  },
+  {
+    label: "ThinkUKnow",
+    link: "http://www.thinkuknow.co.uk/",
+  },
+  {
+    label: "Cybersmart Australia",
+    link: "http://www.cybersmart.gov.au/",
+  },
+  {
+    label: "How to Report Inappropriate Child Images",
+    link: "https://www.iwf.org.uk/report",
+  },
+];
+
 const Resources = () => {
   return (
     <div className="bg-slate-800 text-white px-6 py-16 space-y-24">
@@ -152,6 +187,36 @@ const Resources = () => {
         </div>
       </section>
 
+      {/* Section 4: Other Useful Resources */}
+      <section>
+        <Motion.div
+          className="text-center mb-10"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl font-bold text-yellow-300">Other Helpful Resources</h2>
+          <p className="text-gray-400 mt-2">Explore more tools and quizzes to stay safe online.</p>
+        </Motion.div>
+
+        <ul className="max-w-4xl mx-auto space-y-4 px-4 sm:px-8">
+          {otherResources.map((item, idx) => (
+            <Motion.li
+              key={item.link}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.1, duration: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-slate-700 text-white px-4 py-3 rounded hover:bg-slate-600 transition"
+            >
+              <a href={item.link} target="_blank" rel="noopener noreferrer" className="block">
+                {item.label}
+              </a>
+            </Motion.li>
+          ))}
+        </ul>
+      </section>
     </div>
   );
 };
