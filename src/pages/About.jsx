@@ -15,7 +15,7 @@ const About = () => {
       </Motion.h1>
 
       {/* Paragraphs */}
-      <div className="max-w-5xl mx-auto space-y-8 text-lg leading-relaxed text-gray-200">
+      <div className="max-w-5xl mx-auto space-y-8 text-lg leading-relaxed text-gray-200 text-justify">
         <Motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
