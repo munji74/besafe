@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ResourcesCTA = () => {
   return (
@@ -9,9 +10,11 @@ const ResourcesCTA = () => {
       <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
         Discover age-appropriate activities, tips, and educational materials.
       </p>
-      <button className="bg-green-300 hover:bg-green-400 text-slate-900 font-semibold py-3 px-6 rounded-full transition duration-300">
-        View Resources
-      </button>
+      <Link to="/resources">
+        <button className="bg-green-300 hover:bg-green-400 text-slate-900 font-semibold py-3 px-6 rounded-full transition duration-300">
+          View Resources
+        </button>
+      </Link>
     </section>
   );
 };

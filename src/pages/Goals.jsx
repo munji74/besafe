@@ -1,30 +1,34 @@
 import { motion as Motion } from "framer-motion";
-import { FaExclamationTriangle, FaFileAlt, FaBullhorn, FaDesktop } from "react-icons/fa";
 
+// Images stored in: public/images/goals/
 const goals = [
   {
-    icon: <FaExclamationTriangle className="text-white text-2xl" />,
-    color: "bg-purple-500",
+    icon: "⚠️",
     number: "1",
-    title: "Equip young people with knowledge to navigate the internet safely and avoid potential risks.",
+    title:
+      "Equip young people with knowledge to navigate the internet safely and avoid potential risks.",
+    image: "/images/goals/goal1.jpg",
   },
   {
-    icon: <FaFileAlt className="text-white text-2xl" />,
-    color: "bg-orange-500",
+    icon: "📄",
     number: "2",
-    title: "Raise awareness of dangers like inappropriate content and risky online behaviors due to perceived anonymity.",
+    title:
+      "Raise awareness of dangers like inappropriate content and risky online behaviors due to perceived anonymity.",
+    image: "/images/goals/goal2.jpg",
   },
   {
-    icon: <FaBullhorn className="text-white text-2xl" />,
-    color: "bg-blue-500",
+    icon: "📢",
     number: "3",
-    title: "Encourage the active involvement of parents and teachers to promote online safety and guide young people.",
+    title:
+      "Encourage the active involvement of parents and teachers to promote online safety and guide young people.",
+    image: "/images/goals/goal3.jpg",
   },
   {
-    icon: <FaDesktop className="text-white text-2xl" />,
-    color: "bg-yellow-400",
+    icon: "💻",
     number: "4",
-    title: "Provide tools to help young people use technology safely and respond to threats.",
+    title:
+      "Provide tools to help young people use technology safely and respond to threats.",
+    image: "/images/goals/goal4.jpg",
   },
 ];
 
@@ -47,16 +51,23 @@ const Goals = () => {
         {goals.map((goal, index) => (
           <Motion.div
             key={index}
-            className="flex flex-col items-center text-center p-4 rounded-xl hover:bg-slate-700 transition"
+            className="bg-white bg-opacity-5 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition hover:scale-105 cursor-pointer"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className={`rounded-full w-16 h-16 flex items-center justify-center ${goal.color} mb-4`}>
-              {goal.icon}
+            <img
+              src={goal.image}
+              alt={`Goal ${goal.number}`}
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-4">
+              <div className="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-full mx-auto mb-4 text-white text-2xl">
+                {goal.icon}
+              </div>
+              <h3 className="text-center text-base text-gray-200">{goal.title}</h3>
             </div>
-            <h3 className="text-base text-gray-300">{goal.title}</h3>
           </Motion.div>
         ))}
       </div>
@@ -71,7 +82,9 @@ const Goals = () => {
       >
         <h2 className="text-2xl font-bold text-blue-400">Who should use this Kit?</h2>
         <p className="text-gray-300 text-lg">
-          This kit is crafted for young people aged 5 to 20 years. Whether you're using the internet at school, home, or on a friend’s phone, this kit provides practical tools to help you stay safe.
+          This kit is crafted for young people aged 5 to 20 years. Whether you're
+          using the internet at school, home, or on a friend’s phone, this kit provides
+          practical tools to help you stay safe.
         </p>
       </Motion.div>
 
