@@ -1,9 +1,9 @@
 import { motion as Motion } from "framer-motion";
 
 const pledges = [
-  { age: "2–6yrs", link: "#", delay: 0 },
-  { age: "6–13yrs", link: "#", delay: 0.1 },
-  { age: "13–18yrs", link: "#", delay: 0.2 },
+  { age: "2–6yrs", link: "resources/primary-safety-pledge.pdf", delay: 0 },
+  { age: "6–13yrs", link: "resources/intermediate-pledge.pdf", delay: 0.1 },
+  { age: "13–18yrs", link: "resources/secondary-pledge.pdf", delay: 0.2 },
 ];
 
 const smartRules = [
@@ -71,8 +71,7 @@ const Resources = () => {
               <h3 className="text-lg font-semibold mb-4">Pledge (Age {pledge.age})</h3>
               <a
                 href={pledge.link}
-                target="_blank"
-                rel="noopener noreferrer"
+                download
                 className="inline-block px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-600"
               >
                 Download Pledge

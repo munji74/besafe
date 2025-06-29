@@ -8,6 +8,7 @@ export default {
     extend: {
   animation: {
     wiggle: "wiggle 0.5s ease-in-out",
+    'slide-down': 'slideDown 0.3s ease-out',
   },
   keyframes: {
     wiggle: {
