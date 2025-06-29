@@ -54,11 +54,11 @@ const tips = [
 
 const SafetyTips = () => {
   return (
-    <section className="py-16 bg-slate-800 text-white px-6">
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-400 mb-6">
+    <section className="py-16 bg-blue-100 text-slate-900 px-6">
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-6">
         Online Risks and Safety Tips for Young People
       </h2>
-      <p className="text-center text-gray-300 max-w-3xl mx-auto mb-10">
+      <p className="text-center text-slate-700 max-w-3xl mx-auto mb-10">
         ISOC Toolkit is designed with both children and adults in mind, creating a digital environment everyone can trust.
       </p>
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

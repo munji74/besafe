@@ -28,8 +28,8 @@ const Footer = () => {
         {/* Contact Info */}
         <div>
           <h4 className="font-semibold text-blue-900 mb-2">Contact</h4>
-          <p className="text-sm">Email: hello@besafe.ug</p>
-          <p className="text-sm">Phone: +256 123 456 789</p>
+          {/* <p className="text-sm">Email: hello@besafe.ug</p> */}
+          <p className="text-sm">Phone: +256-393 202 393</p>
         </div>
       </div>
 
@@ -49,7 +49,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="mt-6 text-center text-xs text-blue-700">
-        &copy; {new Date().getFullYear()} BESAFE. In partnership with Internet Society Uganda Chapter & Foundation.
+        &copy; {new Date().getFullYear()} BESAFE.
       </div>
     </footer>
   );

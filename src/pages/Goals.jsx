@@ -51,7 +51,7 @@ const Goals = () => {
         {goals.map((goal, index) => (
           <Motion.div
             key={index}
-            className="bg-white bg-opacity-5 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition hover:scale-105 cursor-pointer"
+            className="bg-white bg-opacity-5 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all transform hover:scale-105 hover:shadow-xl hover:bg-opacity-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -62,11 +62,13 @@ const Goals = () => {
               alt={`Goal ${goal.number}`}
               className="w-full h-40 object-cover"
             />
-            <div className="p-4">
+            <div className="p-4 transition-all duration-300">
               <div className="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-full mx-auto mb-4 text-white text-2xl">
                 {goal.icon}
               </div>
-              <h3 className="text-center text-base text-gray-200">{goal.title}</h3>
+              <h3 className="text-center text-base text-gray-200 hover:text-white transition">
+                {goal.title}
+              </h3>
             </div>
           </Motion.div>
         ))}
@@ -81,7 +83,7 @@ const Goals = () => {
         viewport={{ once: true }}
       >
         <h2 className="text-2xl font-bold text-blue-400">Who should use this Kit?</h2>
-        <p className="text-gray-300 text-lg">
+        <p className="text-gray-300 text-lg text-justify">
           This kit is crafted for young people aged 5 to 20 years. Whether you're
           using the internet at school, home, or on a friend’s phone, this kit provides
           practical tools to help you stay safe.

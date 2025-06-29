@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const ResourcesCTA = () => {
   return (
-    <section className="py-20 bg-slate-800 text-white px-6 text-center">
-      <h2 className="text-3xl md:text-4xl font-bold text-blue-400 mb-4">
+    <section className="py-20 bg-blue-100 text-slate-900 px-6 text-center">
+      <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
         Explore Our Resources
       </h2>
-      <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+      <p className="text-lg text-slate-700 mb-8 max-w-2xl mx-auto">
         Discover age-appropriate activities, tips, and educational materials.
       </p>
       <Link to="/resources">

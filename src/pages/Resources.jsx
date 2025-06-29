@@ -1,9 +1,9 @@
 import { motion as Motion } from "framer-motion";
 
 const pledges = [
-  { age: "2–6yrs", link: "resources/primary-safety-pledge.pdf", delay: 0 },
-  { age: "6–13yrs", link: "resources/intermediate-pledge.pdf", delay: 0.1 },
-  { age: "13–18yrs", link: "resources/secondary-pledge.pdf", delay: 0.2 },
+  { age: "Junior", link: "resources/primary-safety-pledge.pdf", delay: 0 },
+  { age: "Intermediate", link: "resources/intermediate-pledge.pdf", delay: 0.1 },
+  { age: "Secondary", link: "resources/secondary-pledge.pdf", delay: 0.2 },
 ];
 
 const smartRules = [
@@ -111,7 +111,7 @@ const Resources = () => {
               transition={{ delay: pledge.delay, duration: 0.4 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-lg font-semibold mb-4">Pledge (Age {pledge.age})</h3>
+              <h3 className="text-lg font-semibold mb-4">Pledge ({pledge.age})</h3>
               <a
                 href={pledge.link}
                 download
