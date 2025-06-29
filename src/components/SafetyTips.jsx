@@ -1,69 +1,51 @@
 import React from "react";
 import SafetyCard from "./SafetyCard";
-import {
-  FaCommentAlt,
-  FaBalanceScale,
-  FaExclamationTriangle,
-  FaTrash,
-  FaBriefcase,
-  FaUserSecret,
-  FaGamepad,
-  FaRobot,
-} from "react-icons/fa";
 
 const tips = [
   {
-    IconComponent: FaCommentAlt,
-    iconColor: "text-pink-600",
+    emoji: "😤",
     title: "CyberBullying",
     description: "Bullying can now occur through a phone, a computer, or webcam, as well as in person.",
     link: "/cyberbullying",
   },
   {
-    IconComponent: FaBalanceScale,
-    iconColor: "text-green-600",
+    emoji: "📲",
     title: "Digital Ethics",
     description: "Digital ethics is about following online rules — even if no one is there to catch you.",
     link: "/digital-ethics",
   },
   {
-    IconComponent: FaExclamationTriangle,
-    iconColor: "text-yellow-500",
+    emoji: "⚠️",
     title: "Inappropriate Content",
     description: "You can find almost anything online — including content with violent, hateful, or sexual themes.",
     link: "/inappropriate-content",
   },
   {
-    IconComponent: FaBriefcase,
-    iconColor: "text-purple-600",
+    emoji: "💼",
     title: "Online Privacy",
     description: "Once you share personal info online, it’s easy to lose control of it.",
     link: "/online-privacy",
   },
   {
-    IconComponent: FaTrash,
-    iconColor: "text-green-500",
+    emoji: "🗑️",
     title: "Unwanted Requests",
     description: "Adults may ask young people for inappropriate chats, images, or meetings offline.",
     link: "/unwanted-requests",
   },
   {
-    IconComponent: FaUserSecret,
-    iconColor: "text-red-500",
+    emoji: "🚫",
     title: "Online Predators",
     description: "Children may encounter harmful people online while trying to make friends.",
     link: "/online-predators",
   },
   {
-    IconComponent: FaGamepad,
-    iconColor: "text-indigo-500",
+    emoji: "🎮",
     title: "Online Gaming",
     description: "Gaming can be fun, but may expose users to inappropriate content or overspending.",
     link: "/online-gaming",
   },
   {
-    IconComponent: FaRobot,
-    iconColor: "text-orange-500",
+    emoji: "🤖",
     title: "AI Dangers",
     description: "AI tools can mislead, invade privacy, or manipulate users if misused.",
     link: "/ai-dangers",
@@ -83,7 +65,7 @@ const SafetyTips = () => {
         {tips.map((tip, idx) => (
           <SafetyCard
             key={idx}
-            IconComponent={tip.IconComponent}
+            emoji={tip.emoji}
             title={tip.title}
             description={tip.description}
             link={tip.link}
